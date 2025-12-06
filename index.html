@@ -427,6 +427,12 @@
             transform: translateY(-4px);
         }
 
+        .service-icon svg,
+        .about-feature-icon svg,
+        .why-icon svg {
+            color: var(--orange);
+        }
+
         .service-icon {
             width: 56px;
             height: 56px;
@@ -752,7 +758,88 @@
         .cta p {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Contact Form */
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            width: 100%;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--orange);
+            box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .form-note {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .form-note a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
         }
 
         /* Footer */
@@ -1091,28 +1178,46 @@
                     
                     <div class="about-features">
                         <div class="about-feature">
-                            <div class="about-feature-icon">✓</div>
+                            <div class="about-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
                             <div>
                                 <h4>Licensed & Insured</h4>
                                 <p>Fully licensed contractor with comprehensive insurance coverage</p>
                             </div>
                         </div>
                         <div class="about-feature">
-                            <div class="about-feature-icon">⭐</div>
+                            <div class="about-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
                             <div>
                                 <h4>Quality Guarantee</h4>
                                 <p>5-year warranty on all workmanship</p>
                             </div>
                         </div>
                         <div class="about-feature">
-                            <div class="about-feature-icon">🤝</div>
+                            <div class="about-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
                             <div>
                                 <h4>Faith-Based Values</h4>
                                 <p>Honest, reliable, trustworthy service</p>
                             </div>
                         </div>
                         <div class="about-feature">
-                            <div class="about-feature-icon">📋</div>
+                            <div class="about-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 11H3v10h6V11zM21 11h-6v10h6V11z"></path>
+                                    <path d="M21 3H3v5h18V3z"></path>
+                                </svg>
+                            </div>
                             <div>
                                 <h4>Professional Team</h4>
                                 <p>Expert craftsmen with 25+ years experience</p>
@@ -1137,7 +1242,12 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🏠</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
                     <h3>Custom Home Building</h3>
                     <p>Build your dream home from the ground up with our expert custom home construction services. We handle everything from foundation to finish.</p>
                     <ul class="service-list">
@@ -1148,7 +1258,11 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🔨</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
                     <h3>Kitchen Remodeling</h3>
                     <p>Transform your kitchen into the heart of your home with custom cabinetry, premium countertops, and professional craftsmanship.</p>
                     <ul class="service-list">
@@ -1159,7 +1273,12 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🚿</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2v6h6V2M15 14v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2M7 22v-6h10v6"></path>
+                            <rect x="3" y="8" width="18" height="14" rx="2"></rect>
+                        </svg>
+                    </div>
                     <h3>Bathroom Renovation</h3>
                     <p>Create your spa-like retreat with complete bathroom remodeling, modern fixtures, and stunning tile work.</p>
                     <ul class="service-list">
@@ -1170,7 +1289,12 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🪟</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                            <path d="M9 3v18"></path>
+                        </svg>
+                    </div>
                     <h3>Windows & Doors</h3>
                     <p>Improve energy efficiency and curb appeal with professional window and door installation built for Seattle weather.</p>
                     <ul class="service-list">
@@ -1181,7 +1305,14 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="12" y1="18" x2="12" y2="12"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
                     <h3>Plumbing Services</h3>
                     <p>Expert plumbing installations, repairs, and modern water management systems for residential and commercial properties.</p>
                     <ul class="service-list">
@@ -1192,7 +1323,13 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🎨</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                            <line x1="9" y1="20" x2="15" y2="20"></line>
+                            <line x1="12" y1="4" x2="12" y2="20"></line>
+                        </svg>
+                    </div>
                     <h3>Interior Finishes & Carpentry</h3>
                     <p>Premium finishing touches including custom woodwork, trim installation, and decorative carpentry details.</p>
                     <ul class="service-list">
@@ -1203,7 +1340,12 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏡</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
                     <h3>Deck & Outdoor Construction</h3>
                     <p>Expand your living space with custom deck building and outdoor construction designed for the Pacific Northwest.</p>
                     <ul class="service-list">
@@ -1214,7 +1356,14 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏢</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
                     <h3>Commercial Construction</h3>
                     <p>Professional commercial construction services for offices, retail spaces, and commercial properties throughout Seattle.</p>
                     <ul class="service-list">
@@ -1225,7 +1374,12 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">⚡</div>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
                     <h3>Electrical Services</h3>
                     <p>Licensed electrical work including installations, upgrades, and outdoor electrical systems for your property.</p>
                     <ul class="service-list">
@@ -1329,32 +1483,64 @@
             </div>
             <div class="why-grid">
                 <div class="why-item">
-                    <div class="why-icon">🏆</div>
+                    <div class="why-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                            <path d="M4 22h16"></path>
+                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+                        </svg>
+                    </div>
                     <h3>15+ Years Experience</h3>
                     <p>Over a decade of proven expertise in residential and commercial construction across Seattle and King County.</p>
                 </div>
                 <div class="why-item">
-                    <div class="why-icon">💎</div>
+                    <div class="why-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
                     <h3>Premium Quality</h3>
                     <p>We use only the highest quality materials and employ master craftsmen on every project.</p>
                 </div>
                 <div class="why-item">
-                    <div class="why-icon">⏱️</div>
+                    <div class="why-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
                     <h3>On-Time Completion</h3>
                     <p>We respect your time and deliver projects on schedule with clear communication every step of the way.</p>
                 </div>
                 <div class="why-item">
-                    <div class="why-icon">🛡️</div>
+                    <div class="why-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
                     <h3>5-Year Warranty</h3>
                     <p>Every project backed by our comprehensive 5-year workmanship warranty for complete peace of mind.</p>
                 </div>
                 <div class="why-item">
-                    <div class="why-icon">💰</div>
+                    <div class="why-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
                     <h3>Fair & Transparent Pricing</h3>
                     <p>Detailed estimates with no hidden fees. You'll know exactly what you're paying for before we start.</p>
                 </div>
                 <div class="why-item">
-                    <div class="why-icon">✝️</div>
+                    <div class="why-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
                     <h3>Faith-Based Values</h3>
                     <p>Built on honesty, integrity, and respect. We treat your home and family with the care they deserve.</p>
                 </div>
@@ -1515,8 +1701,42 @@
     <section class="cta" id="contact">
         <div class="container">
             <h2>Ready to Start Your Seattle Construction Project?</h2>
-            <p>Get your free, no-obligation estimate today. Let's discuss your vision and bring it to life with professional craftsmanship you can trust.</p>
-            <a href="tel:2061112222" class="btn btn-large">Call (206) 111-2222 Now</a>
+            <p>Get your free, no-obligation estimate today. Fill out the form below or call us directly.</p>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Your Name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Email Address *" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="service" id="service" required>
+                                <option value="">Select Service *</option>
+                                <option value="Kitchen Remodeling">Kitchen Remodeling</option>
+                                <option value="Bathroom Renovation">Bathroom Renovation</option>
+                                <option value="Home Addition">Home Addition</option>
+                                <option value="Custom Home Build">Custom Home Build</option>
+                                <option value="Commercial Construction">Commercial Construction</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-large form-submit">Get Free Estimate</button>
+                    <p class="form-note">Or call us directly at <a href="tel:2061112222">(206) 111-2222</a></p>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -1536,7 +1756,7 @@
                         📞 <strong>(206) 111-2222</strong>
                     </div>
                     <div class="footer-contact-item">
-                        📧 hello@steadfastconstruction.co
+                        📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3cbc6cfcfcce3d0d7c6c2c7c5c2d0d7c0cccdd0d7d1d6c0d7cacccd8dc0cc">[email&#160;protected]</a>
                     </div>
                     <div class="footer-contact-item">
                         📍 7212 Linden Ave N, Seattle, WA 98103
@@ -1663,20 +1883,10 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 70,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                if (t
