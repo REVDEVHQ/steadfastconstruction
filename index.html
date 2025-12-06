@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steadfast Construction - Premier Seattle Builder</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Steadfast Construction | Seattle's Premier Home Builder & Remodeling Contractor</title>
+    <meta name="description" content="Steadfast Construction provides expert home building, kitchen remodeling, bathroom renovation, and custom construction services in Seattle & King County. Licensed, bonded & insured with 25+ years experience. Call (206) 258-7994 for free estimate.">
+    <meta name="keywords" content="Seattle construction, home builder Seattle, kitchen remodeling Seattle, bathroom renovation, custom home building, King County contractor, licensed contractor Seattle, home addition Seattle">
+    <meta name="author" content="Steadfast Construction">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Steadfast Construction - Seattle's Premier Builder">
+    <meta property="og:description" content="Expert construction & remodeling services in Seattle. 25+ years experience, licensed & insured. Free estimates.">
+    <meta property="og:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff881eaa115bbd1cd05.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff881eaa115bbd1cd05.png" type="image/png">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Steadfast Construction",
+      "image": "https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff881eaa115bbd1cd05.png",
+      "telephone": "(206) 258-7994",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.6062,
+        "longitude": -122.3321
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 07:00-18:00, Sa 08:00-16:00",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47"
+      }
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -49,7 +96,18 @@
             align-items: center;
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
             font-size: 1.4rem;
             font-weight: 900;
             color: var(--orange);
@@ -100,6 +158,7 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
+            display: inline-block;
         }
 
         .btn:hover {
@@ -116,6 +175,11 @@
         .btn-outline:hover {
             background: var(--orange);
             color: white;
+        }
+
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1rem;
         }
 
         /* Hero */
@@ -187,11 +251,6 @@
             flex-wrap: wrap;
         }
 
-        .hero-buttons .btn {
-            padding: 1rem 2rem;
-            font-size: 1rem;
-        }
-
         /* Stats */
         .stats {
             background: var(--dark);
@@ -235,6 +294,10 @@
             margin-bottom: 3rem;
         }
 
+        .section-header.center {
+            text-align: center;
+        }
+
         .section-tag {
             color: var(--orange);
             font-weight: 700;
@@ -257,9 +320,91 @@
             max-width: 700px;
         }
 
+        .section-header.center .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .about-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 165, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .about-feature h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .about-feature p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Services */
         .services {
-            background: white;
+            background: var(--light-gray);
         }
 
         .services-grid {
@@ -328,9 +473,97 @@
             font-weight: bold;
         }
 
+        /* Gallery/Portfolio */
+        .portfolio {
+            background: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 2rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Service Areas */
+        .service-areas {
+            background: var(--light-gray);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .area-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .area-item:hover {
+            border-color: var(--orange);
+            transform: translateY(-2px);
+        }
+
+        .area-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
         /* Testimonials */
         .testimonials {
-            background: var(--light-gray);
+            background: white;
         }
 
         .testimonials-grid {
@@ -344,6 +577,7 @@
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border);
         }
 
         .stars {
@@ -391,7 +625,7 @@
 
         /* Process */
         .process {
-            background: white;
+            background: var(--light-gray);
         }
 
         .process-steps {
@@ -431,6 +665,76 @@
             line-height: 1.6;
         }
 
+        /* Why Choose Us */
+        .why-choose {
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .why-item {
+            text-align: center;
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 165, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .why-item h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .why-item p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--light-gray);
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .faq-item h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
         /* CTA */
         .cta {
             background: var(--dark);
@@ -451,46 +755,96 @@
             margin-bottom: 2rem;
         }
 
-        .cta .btn {
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-        }
-
         /* Footer */
         footer {
             background: #0d0d0d;
-            padding: 3rem 2rem 2rem;
-            text-align: center;
+            padding: 4rem 2rem 2rem;
         }
 
-        .footer-logo {
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-about h3 {
+            color: var(--orange);
             font-size: 1.5rem;
             font-weight: 900;
-            color: var(--orange);
             margin-bottom: 1rem;
         }
 
-        footer p {
-            color: rgba(255, 255, 255, 0.6);
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
             margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .footer-tagline {
             color: var(--orange);
             font-style: italic;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
 
         /* Responsive */
         @media (max-width: 1024px) {
             .services-grid,
             .testimonials-grid,
-            .process-steps {
+            .process-steps,
+            .why-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .stats-grid {
+            .stats-grid,
+            .areas-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
@@ -510,7 +864,15 @@
             .services-grid,
             .testimonials-grid,
             .process-steps,
-            .stats-grid {
+            .stats-grid,
+            .portfolio-grid,
+            .areas-grid,
+            .why-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
                 grid-template-columns: 1fr;
             }
         }
@@ -520,10 +882,14 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-content">
-            <div class="logo">Steadfast</div>
+            <div class="logo-container">
+                <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff881eaa115bbd1cd05.png" alt="Steadfast Construction Logo" class="logo-img">
+                <span class="logo-text">Steadfast</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -538,12 +904,12 @@
     <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <span class="hero-badge">Seattle's Premier Builder</span>
+            <span class="hero-badge">Trusted Seattle & King County Builder</span>
             <h1>Building Excellence, <span class="highlight">Creating Legacy</span></h1>
-            <p>Transform your vision into reality with faith-based craftsmanship, uncompromising quality, and professional service you can trust.</p>
+            <p>Transform your vision into reality with faith-based craftsmanship, uncompromising quality, and professional service trusted by Seattle homeowners.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn">Get Free Estimate</a>
-                <a href="#services" class="btn btn-outline">View Services</a>
+                <a href="#contact" class="btn btn-large">Get Free Estimate</a>
+                <a href="#services" class="btn btn-outline btn-large">View Services</a>
             </div>
         </div>
     </section>
@@ -552,16 +918,16 @@
     <div class="stats">
         <div class="stats-grid">
             <div>
-                <span class="stat-number">25+</span>
+                <span class="stat-number">15+</span>
                 <span class="stat-label">Years Experience</span>
             </div>
             <div>
-                <span class="stat-number">500+</span>
+                <span class="stat-number">200+</span>
                 <span class="stat-label">Projects Completed</span>
             </div>
             <div>
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Satisfaction Rate</span>
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
             </div>
             <div>
                 <span class="stat-number">5-Year</span>
@@ -570,74 +936,285 @@
         </div>
     </div>
 
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-tag">About Us</div>
+                    <h2 class="section-title">Seattle's Most Trusted Construction Company</h2>
+                    <h3>Building Dreams with Faith & Integrity Since 2009</h3>
+                    <p>At Steadfast Construction, we're more than just builders—we're craftsmen dedicated to transforming Seattle homes with premium quality and unwavering commitment. Our team brings over a decade of combined experience to every project, from custom home builds to intricate kitchen remodels.</p>
+                    <p>Licensed, bonded, and insured, we pride ourselves on delivering exceptional results that stand the test of time. Every project is handled with meticulous attention to detail, transparent communication, and respect for your home and family.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <div>
+                                <h4>Licensed & Insured</h4>
+                                <p>Fully licensed contractor with comprehensive insurance coverage</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">⭐</div>
+                            <div>
+                                <h4>Quality Guarantee</h4>
+                                <p>5-year warranty on all workmanship</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">🤝</div>
+                            <div>
+                                <h4>Faith-Based Values</h4>
+                                <p>Honest, reliable, trustworthy service</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">📋</div>
+                            <div>
+                                <h4>Professional Team</h4>
+                                <p>Expert craftsmen with 25+ years experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff31d466eda68fd0611.png" alt="Professional Kitchen Remodeling Seattle - Custom Copper Sink Installation">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services -->
     <section class="services" id="services">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header center">
                 <div class="section-tag">What We Do</div>
-                <h2 class="section-title">Construction Services</h2>
-                <p class="section-subtitle">Comprehensive construction solutions for Seattle & King County homeowners and businesses.</p>
+                <h2 class="section-title">Comprehensive Construction Services in Seattle</h2>
+                <p class="section-subtitle">From new home construction to kitchen remodeling, bathroom renovations, and custom carpentry—we deliver exceptional results for Seattle & King County homeowners.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🏠</div>
                     <h3>Custom Home Building</h3>
-                    <p>From foundation to finish, we build your dream home with precision engineering and quality materials.</p>
+                    <p>Build your dream home from the ground up with our expert custom home construction services. We handle everything from foundation to finish.</p>
                     <ul class="service-list">
-                        <li>New construction</li>
-                        <li>Home additions</li>
-                        <li>Major renovations</li>
+                        <li>New home construction</li>
+                        <li>Home additions & extensions</li>
+                        <li>Major structural renovations</li>
+                        <li>ADU construction</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔨</div>
                     <h3>Kitchen Remodeling</h3>
-                    <p>Transform your kitchen with custom cabinetry, premium countertops, and expert installation.</p>
+                    <p>Transform your kitchen into the heart of your home with custom cabinetry, premium countertops, and professional craftsmanship.</p>
                     <ul class="service-list">
-                        <li>Custom cabinets</li>
-                        <li>Countertop installation</li>
-                        <li>Tile backsplash</li>
+                        <li>Custom cabinet installation</li>
+                        <li>Countertop replacement</li>
+                        <li>Tile backsplash design</li>
+                        <li>Kitchen layout redesign</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🚿</div>
                     <h3>Bathroom Renovation</h3>
-                    <p>Complete bathroom transformations with modern fixtures, tile work, and custom solutions.</p>
+                    <p>Create your spa-like retreat with complete bathroom remodeling, modern fixtures, and stunning tile work.</p>
                     <ul class="service-list">
-                        <li>Full remodels</li>
-                        <li>Fixture upgrades</li>
-                        <li>Tile installation</li>
+                        <li>Full bathroom remodels</li>
+                        <li>Shower & tub installation</li>
+                        <li>Vanity & fixture upgrades</li>
+                        <li>Custom tile work</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🪟</div>
                     <h3>Windows & Doors</h3>
-                    <p>Energy-efficient window and door installation designed for Pacific Northwest weather.</p>
+                    <p>Improve energy efficiency and curb appeal with professional window and door installation built for Seattle weather.</p>
                     <ul class="service-list">
-                        <li>Window replacement</li>
-                        <li>Door installation</li>
+                        <li>Energy-efficient windows</li>
+                        <li>Entry door installation</li>
+                        <li>Patio door replacement</li>
                         <li>Weather sealing</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
                     <h3>Plumbing Services</h3>
-                    <p>Expert plumbing installations, repairs, and modern water management systems.</p>
+                    <p>Expert plumbing installations, repairs, and modern water management systems for residential and commercial properties.</p>
                     <ul class="service-list">
-                        <li>System installation</li>
-                        <li>Repairs & maintenance</li>
-                        <li>Fixture upgrades</li>
+                        <li>Plumbing system installation</li>
+                        <li>Fixture replacement</li>
+                        <li>Pipe repair & maintenance</li>
+                        <li>Water heater installation</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
-                    <h3>Interior Finishes</h3>
-                    <p>Premium finishing work including custom woodwork, trim, and decorative details.</p>
+                    <h3>Interior Finishes & Carpentry</h3>
+                    <p>Premium finishing touches including custom woodwork, trim installation, and decorative carpentry details.</p>
                     <ul class="service-list">
-                        <li>Crown molding</li>
-                        <li>Custom trim</li>
+                        <li>Crown molding installation</li>
+                        <li>Custom trim & baseboards</li>
+                        <li>Built-in cabinetry</li>
                         <li>Finish carpentry</li>
                     </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏡</div>
+                    <h3>Deck & Outdoor Construction</h3>
+                    <p>Expand your living space with custom deck building and outdoor construction designed for the Pacific Northwest.</p>
+                    <ul class="service-list">
+                        <li>Custom deck construction</li>
+                        <li>Deck repair & restoration</li>
+                        <li>Outdoor lighting</li>
+                        <li>Pergolas & structures</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Construction</h3>
+                    <p>Professional commercial construction services for offices, retail spaces, and commercial properties throughout Seattle.</p>
+                    <ul class="service-list">
+                        <li>Office buildouts</li>
+                        <li>Retail renovations</li>
+                        <li>Commercial repairs</li>
+                        <li>ADA compliance upgrades</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrical Services</h3>
+                    <p>Licensed electrical work including installations, upgrades, and outdoor electrical systems for your property.</p>
+                    <ul class="service-list">
+                        <li>Electrical panel upgrades</li>
+                        <li>Outlet & switch installation</li>
+                        <li>Outdoor electrical work</li>
+                        <li>Code compliance updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header center">
+                <div class="section-tag">Our Work</div>
+                <h2 class="section-title">Recent Seattle Construction Projects</h2>
+                <p class="section-subtitle">See the quality craftsmanship we deliver on every project across Seattle and King County.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff31d466eda68fd0611.png" alt="Modern Kitchen Remodel Seattle - Custom Copper Sink Installation">
+                    <div class="portfolio-overlay">
+                        <h3>Kitchen Remodeling</h3>
+                        <p>Custom copper sink with mosaic tile backsplash</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff181eaa12a02d1cc82.png" alt="Professional Plumbing Installation Seattle - Outdoor Water Management">
+                    <div class="portfolio-overlay">
+                        <h3>Outdoor Plumbing System</h3>
+                        <p>Professional water management installation</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bfef81eaa10434d1cc6b.png" alt="Seattle Kitchen Sink Installation - Premium Fixtures">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Kitchen Fixtures</h3>
+                        <p>High-end sink and faucet installation</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bfede0f0924447ef458b.png" alt="Custom Kitchen Countertop Seattle - Professional Installation">
+                    <div class="portfolio-overlay">
+                        <h3>Kitchen Countertop Detail</h3>
+                        <p>Custom countertop with decorative edge work</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff31d466eda68fd0611.png" alt="Seattle Bathroom Remodeling - Modern Fixtures">
+                    <div class="portfolio-overlay">
+                        <h3>Bathroom Renovation</h3>
+                        <p>Modern fixture installation with custom tile</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/6933bff181eaa12a02d1cc82.png" alt="Seattle Electrical Work - Outdoor Systems">
+                    <div class="portfolio-overlay">
+                        <h3>Electrical Installation</h3>
+                        <p>Outdoor electrical and water systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+        <div class="container">
+            <div class="section-header center">
+                <div class="section-tag">Service Areas</div>
+                <h2 class="section-title">Proudly Serving Seattle & King County</h2>
+                <p class="section-subtitle">We provide professional construction services throughout the greater Seattle metropolitan area.</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-item"><h4>Seattle</h4></div>
+                <div class="area-item"><h4>Bellevue</h4></div>
+                <div class="area-item"><h4>Redmond</h4></div>
+                <div class="area-item"><h4>Kirkland</h4></div>
+                <div class="area-item"><h4>Renton</h4></div>
+                <div class="area-item"><h4>Kent</h4></div>
+                <div class="area-item"><h4>Federal Way</h4></div>
+                <div class="area-item"><h4>Sammamish</h4></div>
+                <div class="area-item"><h4>Issaquah</h4></div>
+                <div class="area-item"><h4>Mercer Island</h4></div>
+                <div class="area-item"><h4>Shoreline</h4></div>
+                <div class="area-item"><h4>Bothell</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header center">
+                <div class="section-tag">Why Choose Us</div>
+                <h2 class="section-title">The Steadfast Difference</h2>
+                <p class="section-subtitle">What sets us apart from other Seattle contractors.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">🏆</div>
+                    <h3>15+ Years Experience</h3>
+                    <p>Over a decade of proven expertise in residential and commercial construction across Seattle and King County.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">💎</div>
+                    <h3>Premium Quality</h3>
+                    <p>We use only the highest quality materials and employ master craftsmen on every project.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">⏱️</div>
+                    <h3>On-Time Completion</h3>
+                    <p>We respect your time and deliver projects on schedule with clear communication every step of the way.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">🛡️</div>
+                    <h3>5-Year Warranty</h3>
+                    <p>Every project backed by our comprehensive 5-year workmanship warranty for complete peace of mind.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">💰</div>
+                    <h3>Fair & Transparent Pricing</h3>
+                    <p>Detailed estimates with no hidden fees. You'll know exactly what you're paying for before we start.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">✝️</div>
+                    <h3>Faith-Based Values</h3>
+                    <p>Built on honesty, integrity, and respect. We treat your home and family with the care they deserve.</p>
                 </div>
             </div>
         </div>
@@ -646,31 +1223,31 @@
     <!-- Process -->
     <section class="process" id="process">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header center">
                 <div class="section-tag">How It Works</div>
-                <h2 class="section-title">Simple & Transparent Process</h2>
-                <p class="section-subtitle">From consultation to completion, we make construction stress-free.</p>
+                <h2 class="section-title">Our Simple & Transparent Process</h2>
+                <p class="section-subtitle">From consultation to completion, we make construction stress-free and enjoyable.</p>
             </div>
             <div class="process-steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Free Consultation</h3>
-                    <p>We visit your property, discuss your vision, and provide a detailed estimate within 48 hours.</p>
+                    <h3>Free Consultation & Estimate</h3>
+                    <p>We visit your property, discuss your vision and needs, take measurements, and provide a detailed written estimate within 24-48 hours—completely free with no obligation.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Planning & Design</h3>
-                    <p>Collaborate on materials, timeline, and budget. We handle permits and scheduling.</p>
+                    <p>Collaborate with our team on materials, finishes, timeline, and budget. We handle all permits, scheduling, and coordinate with subcontractors.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Construction</h3>
-                    <p>Our licensed team executes the project with daily updates and quality checkpoints.</p>
+                    <h3>Expert Construction</h3>
+                    <p>Our licensed, experienced team executes your project with precision. We provide daily updates, maintain a clean job site, and ensure quality at every checkpoint.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Final Walkthrough</h3>
-                    <p>Complete inspection together, ensure perfection, and issue your 5-year warranty.</p>
+                    <h3>Final Walkthrough & Warranty</h3>
+                    <p>Complete a thorough inspection together to ensure every detail meets our high standards. Once satisfied, we issue your 5-year workmanship warranty.</p>
                 </div>
             </div>
         </div>
@@ -679,15 +1256,15 @@
     <!-- Testimonials -->
     <section class="testimonials" id="reviews">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header center">
                 <div class="section-tag">Client Reviews</div>
-                <h2 class="section-title">What Homeowners Say</h2>
-                <p class="section-subtitle">Trusted by Seattle homeowners for quality craftsmanship and professional service.</p>
+                <h2 class="section-title">What Seattle Homeowners Say</h2>
+                <p class="section-subtitle">Trusted by hundreds of satisfied clients across Seattle and King County for quality craftsmanship and professional service.</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Outstanding job on our 100-year-old house. The attention to detail and pride in the work really showed through every stage."</p>
+                    <p class="testimonial-text">"Outstanding job on our 100-year-old house. The extensive prep work was incredible. Rachel's attention to detail and Jose's pride in the work really showed through every stage of the project."</p>
                     <div class="author">
                         <div class="author-avatar">JB</div>
                         <div class="author-info">
@@ -698,7 +1275,7 @@
                 </div>
                 <div class="testimonial">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"They went above and beyond - even identified and fixed issues from previous contractors. True professionals."</p>
+                    <p class="testimonial-text">"They sealed doors and windows, painted trim, and even identified and flagged siding gaps from previous contractors with proper fixes for longevity. True professionals who care about quality."</p>
                     <div class="author">
                         <div class="author-avatar">SP</div>
                         <div class="author-info">
@@ -709,7 +1286,7 @@
                 </div>
                 <div class="testimonial">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Excellent job preparing our 1936 house. Careful, thorough, and completely on point throughout the entire project."</p>
+                    <p class="testimonial-text">"Excellent job preparing our 1936 house for painting. The team was careful, thorough, and completely on point throughout the entire renovation. Highly recommend!"</p>
                     <div class="author">
                         <div class="author-avatar">JR</div>
                         <div class="author-info">
@@ -718,6 +1295,76 @@
                         </div>
                     </div>
                 </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Outstanding exterior work. Great communication, precise execution, and beautiful finish. The crew was professional and respectful of our property throughout."</p>
+                    <div class="author">
+                        <div class="author-avatar">AR</div>
+                        <div class="author-info">
+                            <h4>Amber R.</h4>
+                            <p>Homeowner, Seattle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Thrilled with our kitchen cabinet refinishing. Professional service, incredible attention to detail, and the results are absolutely stunning. Worth every penny!"</p>
+                    <div class="author">
+                        <div class="author-avatar">AL</div>
+                        <div class="author-info">
+                            <h4>Allison L.</h4>
+                            <p>Homeowner, Kirkland</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Meticulous prep work—neighbors even commented on how professional the crew was. They addressed issues quickly and the final result exceeded our expectations."</p>
+                    <div class="author">
+                        <div class="author-avatar">DP</div>
+                        <div class="author-info">
+                            <h4>Dan P.</h4>
+                            <p>Homeowner, Seattle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header center">
+                <div class="section-tag">FAQ</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about our Seattle construction services.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Are you licensed and insured?</h3>
+                    <p>Yes, Steadfast Construction is fully licensed, bonded, and insured. We carry comprehensive general liability insurance and workers' compensation coverage to protect you and our team on every project.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What areas do you serve?</h3>
+                    <p>We proudly serve Seattle and all of King County, including Bellevue, Redmond, Kirkland, Renton, Kent, Federal Way, Sammamish, Issaquah, Mercer Island, Shoreline, and Bothell.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How much do your services cost?</h3>
+                    <p>Every project is unique, so costs vary based on scope, materials, and complexity. We provide detailed, transparent written estimates at no charge. Contact us for a free consultation and quote.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer warranties?</h3>
+                    <p>Yes! Every project is backed by our comprehensive 5-year workmanship warranty. We stand behind our work and are committed to your complete satisfaction.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long will my project take?</h3>
+                    <p>Timeline depends on project scope. Kitchen remodels typically take 2-4 weeks, bathroom renovations 1-3 weeks, and custom home builds 6-12 months. We'll provide a detailed schedule during your consultation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you handle permits and inspections?</h3>
+                    <p>Absolutely. We manage all necessary permits, inspections, and ensure full compliance with Seattle building codes. You won't have to worry about the paperwork—we handle it all.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -725,18 +1372,59 @@
     <!-- CTA -->
     <section class="cta" id="contact">
         <div class="container">
-            <h2>Ready to Start Your Project?</h2>
-            <p>Get your free estimate today. No pressure, just honest advice from experienced professionals.</p>
-            <a href="tel:2062587994" class="btn">Call (206) 258-7994</a>
+            <h2>Ready to Start Your Seattle Construction Project?</h2>
+            <p>Get your free, no-obligation estimate today. Let's discuss your vision and bring it to life with professional craftsmanship you can trust.</p>
+            <a href="tel:2062587994" class="btn btn-large">Call (206) 258-7994 Now</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-logo">STEADFAST CONSTRUCTION</div>
-        <p>&copy; 2024 Steadfast Construction. All rights reserved.</p>
-        <p>Licensed, Bonded & Insured | CCB #123456</p>
-        <p class="footer-tagline">"Building with Faith & Integrity Since 1999"</p>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>STEADFAST CONSTRUCTION</h3>
+                <p>Seattle's premier construction and remodeling company. Building with faith, integrity, and uncompromising quality since 2009. Licensed, bonded & insured contractor serving Seattle and King County.</p>
+                <p style="margin-top: 1rem;"><strong>Call us today: (206) 258-7994</strong></p>
+                <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.9rem; color: rgba(255, 255, 255, 0.5);">
+                    Built by <a href="https://contractorarsenal.com" target="_blank" rel="noopener" style="color: var(--orange); text-decoration: none; font-weight: 600;">Contractor Arsenal</a>
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Custom Home Building</a></li>
+                    <li><a href="#services">Kitchen Remodeling</a></li>
+                    <li><a href="#services">Bathroom Renovation</a></li>
+                    <li><a href="#services">Windows & Doors</a></li>
+                    <li><a href="#services">Plumbing Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Service Areas</h4>
+                <ul>
+                    <li>Seattle, WA</li>
+                    <li>Bellevue, WA</li>
+                    <li>Redmond, WA</li>
+                    <li>Kirkland, WA</li>
+                    <li>All of King County</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Steadfast Construction. All rights reserved.</p>
+            <p>Licensed, Bonded & Insured | CCB #123456</p>
+            <p class="footer-tagline">"Building with Faith & Integrity Since 2009"</p>
+        </div>
     </footer>
 
     <script>
