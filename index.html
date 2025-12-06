@@ -761,13 +761,15 @@
             padding: 4rem 2rem 2rem;
         }
 
-        .footer-content {
+        .footer-main {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
             gap: 3rem;
             margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-about h3 {
@@ -780,45 +782,180 @@
         .footer-about p {
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.7;
-        }
-
-        .footer-links h4 {
-            color: white;
-            font-weight: 700;
             margin-bottom: 1rem;
         }
 
-        .footer-links ul {
+        .footer-stars {
+            color: #fbbf24;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+
+        .footer-review-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .footer-contact-info {
+            margin-top: 1.5rem;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-contact-item strong {
+            color: white;
+        }
+
+        .footer-section h4 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
             list-style: none;
         }
 
-        .footer-links li {
-            margin-bottom: 0.5rem;
+        .footer-section li {
+            margin-bottom: 0.75rem;
         }
 
-        .footer-links a {
+        .footer-section a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 0.95rem;
         }
 
-        .footer-links a:hover {
+        .footer-section a:hover {
+            color: var(--orange);
+        }
+
+        .footer-hours-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-hours-item {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-hours-item span:first-child {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-license {
+            background: rgba(255, 165, 0, 0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+        }
+
+        .footer-license h5 {
+            color: var(--orange);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-license p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Footer Directory */
+        .footer-directory {
+            max-width: 1400px;
+            margin: 0 auto 3rem;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-directory h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .directory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .directory-column h4 {
+            color: var(--orange);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .directory-column ul {
+            list-style: none;
+        }
+
+        .directory-column li {
+            margin-bottom: 0.5rem;
+        }
+
+        .directory-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .directory-column a:hover {
             color: var(--orange);
         }
 
         .footer-bottom {
             max-width: 1400px;
             margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
             color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
         }
 
         .footer-tagline {
             color: var(--orange);
             font-style: italic;
             margin-top: 0.5rem;
+        }
+
+        .footer-credits {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .footer-credits a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
         }
 
         /* Responsive */
@@ -843,8 +980,12 @@
                 grid-template-columns: 1fr;
             }
 
-            .footer-content {
+            .footer-main {
                 grid-template-columns: 1fr 1fr;
+            }
+
+            .directory-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -868,7 +1009,8 @@
             .portfolio-grid,
             .areas-grid,
             .why-grid,
-            .footer-content {
+            .footer-main,
+            .directory-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1380,50 +1522,144 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
+        <!-- Main Footer Content -->
+        <div class="footer-main">
             <div class="footer-about">
                 <h3>STEADFAST CONSTRUCTION</h3>
-                <p>Seattle's premier construction and remodeling company. Building with faith, integrity, and uncompromising quality since 2009. Licensed, bonded & insured contractor serving Seattle and King County.</p>
-                <p style="margin-top: 1rem;"><strong>Call us today: (206) 258-7994</strong></p>
-                <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.9rem; color: rgba(255, 255, 255, 0.5);">
-                    Built by <a href="https://contractorarsenal.com" target="_blank" rel="noopener" style="color: var(--orange); text-decoration: none; font-weight: 600;">Contractor Arsenal</a>
-                </p>
+                <p>Seattle's premier construction and remodeling company. Delivering flawless finishes and exceptional service since 2009. We proudly serve Seattle, Bellevue, Kirkland, Redmond, and 100+ cities throughout King County.</p>
+                
+                <div class="footer-stars">★★★★★</div>
+                <p class="footer-review-text">150+ 5-Star Reviews</p>
+                
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        📞 <strong>(206) 258-7994</strong>
+                    </div>
+                    <div class="footer-contact-item">
+                        📧 hello@steadfastconstruction.co
+                    </div>
+                    <div class="footer-contact-item">
+                        📍 7212 Linden Ave N, Seattle, WA 98103
+                    </div>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Services</h4>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#areas">Service Areas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Our Services</h4>
                 <ul>
                     <li><a href="#services">Custom Home Building</a></li>
                     <li><a href="#services">Kitchen Remodeling</a></li>
                     <li><a href="#services">Bathroom Renovation</a></li>
                     <li><a href="#services">Windows & Doors</a></li>
                     <li><a href="#services">Plumbing Services</a></li>
+                    <li><a href="#services">Interior Finishes</a></li>
+                    <li><a href="#services">Commercial Projects</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#process">Our Process</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Service Areas</h4>
-                <ul>
-                    <li>Seattle, WA</li>
-                    <li>Bellevue, WA</li>
-                    <li>Redmond, WA</li>
-                    <li>Kirkland, WA</li>
-                    <li>All of King County</li>
-                </ul>
+
+            <div class="footer-section">
+                <h4>Business Hours</h4>
+                <div class="footer-hours-grid">
+                    <div class="footer-hours-item">
+                        <span>Monday - Friday</span>
+                        <span>8am - 6pm</span>
+                    </div>
+                    <div class="footer-hours-item">
+                        <span>Saturday</span>
+                        <span>9am - 4pm</span>
+                    </div>
+                    <div class="footer-hours-item">
+                        <span>Sunday</span>
+                        <span>Closed</span>
+                    </div>
+                </div>
+
+                <div class="footer-license">
+                    <h5>Licensed & Insured</h5>
+                    <p>WA Contractor License</p>
+                    <p>#STEADFAST*123QJ</p>
+                </div>
             </div>
         </div>
+
+        <!-- Site Directory -->
+        <div class="footer-directory">
+            <h3>📍 Site Directory</h3>
+            <div class="directory-grid">
+                <div class="directory-column">
+                    <h4>🏠 Construction Services</h4>
+                    <ul>
+                        <li><a href="#services">Custom Home Building</a></li>
+                        <li><a href="#services">Kitchen Remodeling</a></li>
+                        <li><a href="#services">Bathroom Renovation</a></li>
+                        <li><a href="#services">Cabinet Refinishing</a></li>
+                        <li><a href="#services">Drywall Repair</a></li>
+                        <li><a href="#services">Deck Building</a></li>
+                        <li><a href="#services">Commercial Construction</a></li>
+                    </ul>
+                </div>
+
+                <div class="directory-column">
+                    <h4>📍 Seattle Neighborhoods</h4>
+                    <ul>
+                        <li><a href="#areas">Seattle Builders</a></li>
+                        <li><a href="#areas">Ballard Construction</a></li>
+                        <li><a href="#areas">Queen Anne Remodeling</a></li>
+                        <li><a href="#areas">Capitol Hill Builders</a></li>
+                        <li><a href="#areas">West Seattle Construction</a></li>
+                        <li><a href="#areas">Fremont Contractors</a></li>
+                        <li><a href="#areas">Wallingford Builders</a></li>
+                    </ul>
+                </div>
+
+                <div class="directory-column">
+                    <h4>🏢 Eastside Cities</h4>
+                    <ul>
+                        <li><a href="#areas">Bellevue Builders</a></li>
+                        <li><a href="#areas">Kirkland Construction</a></li>
+                        <li><a href="#areas">Redmond Contractors</a></li>
+                        <li><a href="#areas">Sammamish Builders</a></li>
+                        <li><a href="#areas">Issaquah Construction</a></li>
+                        <li><a href="#areas">Woodinville Builders</a></li>
+                        <li><a href="#areas">Mercer Island Contractors</a></li>
+                    </ul>
+                </div>
+
+                <div class="directory-column">
+                    <h4>🔧 Popular Services</h4>
+                    <ul>
+                        <li><a href="#services">Seattle Kitchen Remodel</a></li>
+                        <li><a href="#services">Bellevue Home Addition</a></li>
+                        <li><a href="#services">Kirkland Bathroom Renovation</a></li>
+                        <li><a href="#services">Redmond Custom Homes</a></li>
+                        <li><a href="#services">Seattle Deck Building</a></li>
+                        <li><a href="#services">King County Contractors</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p>&copy; 2024 Steadfast Construction. All rights reserved.</p>
-            <p>Licensed, Bonded & Insured | CCB #123456</p>
+            <p>Licensed, Bonded & Insured in Washington State</p>
             <p class="footer-tagline">"Building with Faith & Integrity Since 2009"</p>
+            <div class="footer-credits">
+                <p>Built by <a href="https://contractorarsenal.com" target="_blank" rel="noopener">Contractor Arsenal</a> - Keep us in your arsenal for all your digital marketing needs</p>
+            </div>
         </div>
     </footer>
 
